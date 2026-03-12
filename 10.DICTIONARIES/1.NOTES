@@ -1,0 +1,83 @@
+___________________________________________________________________
+DICTIONARIES 
+___________________________________________________________________
+
+🔹 1️⃣ What is a Dictionary?
+    A dictionary stores data in key–value pairs.
+Example:
+code:   student = {
+                    "name": "Yogith",
+                    "age": 21, 
+                    "city": "Bengaluru"
+                    }
+
+    Think of it like a real dictionary:
+    ✔ Word → Meaning
+    ✔ Key → Value
+___________________________________________________________________
+
+🔹 2️⃣ Properties of Dictionaries
+    Unordered (in Python 3.7+, keeps insertion order)
+
+    ✔ Mutable (can change)
+    ✔ Keys must be unique
+    ✔ Values can repeat
+    ✔ Keys must be immutable (string, number, tuple)
+___________________________________________________________________
+
+🔹 3️⃣ Accessing Values
+
+code:   student["name"]
+
+note:   If key doesn’t exist → KeyError
+
+Safer method:   student.get("name")
+                student.get("marks", "Not Found")
+syntex:         dictionary-name.get("search-key","default-output")
+___________________________________________________________________
+
+🔹 4️⃣ Adding / Updating Values
+code:   student["age"] = 22     # update
+        student["marks"] = 90   # add new
+___________________________________________________________________
+
+🔹 5️⃣ Deleting Items
+code:   student.pop("age")
+        del student["city"]
+        student.clear()         # empty dictionary
+___________________________________________________________________
+
+🔹 6️⃣ Looping Through Dictionaries
+-------------------------------------------------------------------
+        Loop keys:
+code:   for k in student:
+            print(k)
+
+        Loop values:
+code:   for v in student.values():
+            print(v)
+
+        Loop key + value:
+code:   for k, v in student.items():
+            print(k, v)
+___________________________________________________________________
+
+🔹 7️⃣ Check If Key Exists
+
+code:   if "age" in student:
+            print("exists")
+___________________________________________________________________
+
+🔹 8️⃣ Nesting (Dictionaries Inside Lists / Dicts)
+code:   students = {
+            "s1": {"name": "A", "age": 20},
+            "s2": {"name": "B", "age": 22}
+        }
+___________________________________________________________________
+
+🧠 MEMORY TRICK
+    ✔ Dictionary = Key → Value
+    ✔ Fast lookups, fast updates
+___________________________________________________________________    
+
+sorting 

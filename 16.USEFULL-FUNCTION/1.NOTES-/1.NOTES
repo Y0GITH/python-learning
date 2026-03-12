@@ -1,0 +1,150 @@
+___________________________________________________________________
+
+📘 FUNCTIONS SIMILAR TO map() AND filter()
+___________________________________________________________________
+
+🔹 1️⃣ map()
+    Used to transform every element in a dataset.
+-------------------------------------------------------------------
+syntax:
+        map(function, iterable)
+-------------------------------------------------------------------
+Example:
+        sales = [100, 200, 300]
+        tax = list(map(lambda x: x * 1.18, sales))
+        print(tax)
+Output
+        [118.0, 236.0, 354.0]
+___________________________________________________________________
+
+🔹 2️⃣ filter()
+    Used to select elements based on a condition.
+-------------------------------------------------------------------
+syntax:
+        filter(function, iterable)
+-------------------------------------------------------------------
+Example:
+        sales = [500, 1200, 700, 1800]
+        high_sales = list(filter(lambda x: x > 1000, sales))
+        print(high_sales)
+Output
+        [1200, 1800]
+
+✔ keeps values that satisfy condition
+___________________________________________________________________
+
+🔹 3️⃣ zip()
+        Used to combine multiple datasets together.
+-------------------------------------------------------------------
+syntax:
+        zip(list1, list2)
+-------------------------------------------------------------------
+Example:
+        products = ["apple", "mango", "banana"]
+        sales = [100, 200, 150]
+        data = list(zip(products, sales))
+        print(data)
+Output
+        [('apple', 100), ('mango', 200), ('banana', 150)]
+-------------------------------------------------------------------
+✔ used for pairing datasets
+Very common in analytics.
+___________________________________________________________________
+
+🔹 4️⃣ enumerate()
+    Used when you need index + value together.
+-------------------------------------------------------------------
+syntax:
+        enumerate(iterable)
+-------------------------------------------------------------------
+Example:
+        sales = [100, 200, 300]
+        for index, value in enumerate(sales):
+            print(index, value)
+Output
+        0 100
+        1 200
+        2 300
+-------------------------------------------------------------------
+✔ useful when tracking row numbers.
+___________________________________________________________________
+
+🔹 5️⃣ any()
+    Returns True if ANY condition is true.
+-------------------------------------------------------------------
+syntax:
+        any(iterable)
+-------------------------------------------------------------------
+syntax:
+        any(condition for item in iterable)        
+-------------------------------------------------------------------
+Example:
+        sales = [200, 300, 1500]
+        print(any(x > 1000 for x in sales))
+Output
+        True
+-------------------------------------------------------------------
+✔ checks if at least one value satisfies condition
+___________________________________________________________________
+
+🔹 6️⃣ all()
+    Returns True only if ALL conditions are true.
+-------------------------------------------------------------------
+syntax:
+        all(iterable)
+-------------------------------------------------------------------
+syntax:
+        all(condition for item in iterable)        
+-------------------------------------------------------------------
+Example:
+        sales = [200, 300, 400]
+        print(all(x > 100 for x in sales))
+Output
+        True
+-------------------------------------------------------------------
+✔ checks if every value satisfies condition
+___________________________________________________________________
+
+🔹 7️⃣ sorted()
+    Sorts data.
+    sorted() is used to sort elements in ascending or descending order.
+    It does not modify the original list.
+    It returns a new sorted list.
+-------------------------------------------------------------------
+syntax:
+        sorted(iterable)
+-------------------------------------------------------------------
+Example:
+        sales = [500, 200, 900]
+        print(sorted(sales))
+Output:
+        [200, 500, 900]
+-------------------------------------------------------------------
+✔ sorting datasets
+___________________________________________________________________
+
+🧠 MEMORY TRICK
+
+Think of them like data pipeline tools:
+
+map()        → modify data
+filter()     → select data
+zip()        → combine data
+enumerate()  → index + value
+any()        → check at least one
+all()        → check everything
+sorted()     → order data
+
+🔥 Most Important for Data Analytics
+___________________________________________________________________
+
+Focus mainly on:
+
+    + map()
+    + filter()
+    + zip()
+    + enumerate()
+    + sorted()
+
+These appear everywhere in Python data workflows.
+___________________________________________________________________

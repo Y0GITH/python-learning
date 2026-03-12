@@ -1,0 +1,20 @@
+Functions in Python
+    A function is a reusable block of code that performs a specific task.
+
+In data analytics, functions help you:
+    Avoid repeating calculations
+    Make analysis clean and readable
+    Apply the same logic to different datasets
+
+A function can:
+    Take inputs (parameters) → data values
+    Process the data → calculations / logic
+    Return output → result for analysis
+
+Example use cases in analytics:
+    Calculating averages
+    Computing percentages (conversion rate, growth rate)
+    Cleaning data values
+    Reusable KPI calculations
+
+    

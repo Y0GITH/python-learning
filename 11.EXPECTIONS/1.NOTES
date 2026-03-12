@@ -1,0 +1,95 @@
+📘 EXCEPTIONS 
+______________________________________________________________________
+
+🔹 1️⃣ What is an Exception?
+    An exception is an error that happens while the program is running.
+
+Example:   
+code:   x = 10 / 0
+output 
+Error:  ZeroDivisionError
+
+Without exception handling → program crashes ❌
+______________________________________________________________________
+
+🔹 2️⃣ Why use Exception Handling?
+    ✔ Prevent program from crashing
+    ✔ Handle user input errors
+    ✔ Make program stable
+    ✔ Professional coding practice
+______________________________________________________________________
+
+🔹 3️⃣ Basic Syntax
+Syntax <-
+try:
+    # risky code
+except:
+    # runs if error happens
+
+Example <-
+code:   try:
+            num = int(input("Enter number: "))
+            print(10 / num)
+        except:
+            print("Invalid input")
+______________________________________________________________________
+
+🔹 4️⃣ Catch Specific Errors (Best Practice)
+
+code:   try:
+            num = int(input("Enter number: "))
+            print(10 / num)
+        except ValueError:
+            print("Please enter a valid number")
+        except ZeroDivisionError:
+            print("Cannot divide by zero")
+______________________________________________________________________
+
+🔹 5️⃣ else Block
+    Runs if no error occurs.
+
+code:   try:
+            x = int(input("Enter number: "))
+        except ValueError:
+            print("Invalid input")
+        else:
+            print("You entered:", x)
+______________________________________________________________________
+
+🔹 6️⃣ finally Block
+    Runs always (error or no error).
+
+code:   try:
+            x = int(input("Enter number: "))
+        except:
+            print("Error")
+        finally:
+            print("Program finished")
+______________________________________________________________________
+
+🔹 7️⃣ Common Exceptions
+__________________________________________________________
+|         Error	            |     When It Happens
+|---------------------------|-----------------------------     
+|    ValueError          	|  Wrong type conversion
+|    ZeroDivisionError   	|  Divide by zero
+|    IndexError	            |  List index out of range
+|    KeyError               |  Dictionary key not found
+|    TypeError	            |  Wrong data type
+|    FileNotFoundError	    |  File not found
+|---------------------------------------------------------
+______________________________________________________________________
+
+🔹 8️⃣ Raise Custom Exception
+
+code:   age = int(input("Enter age: "))
+        if age < 0:
+            raise ValueError("Age cannot be negative")
+______________________________________________________________________
+
+🧠 MEMORY TRICK
+try → risky code
+except → handle error
+else → runs if no error
+finally → runs always
+______________________________________________________________________

@@ -1,0 +1,13 @@
+📌 Used very often in beginner programs.
+✔ Recommended Method
+
+🔹 Concatenation Using `f-strings` (Best & Modern)
+code:   name = "Rahul"
+        score = 85
+        print(f"Student {name} scored {score} marks")
+
+📌 Output: Student Rahul scored 85 marks
+
+✔ Clean
+✔ Fast
+✔ No `str()` needed

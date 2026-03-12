@@ -1,0 +1,110 @@
+______________________________________________________________________
+📘 MODULES
+______________________________________________________________________
+
+🔹 1️⃣ What is a Module?
+    A module is simply a Python file (.py) that contains functions, classes, or variables which you can reuse in another file.
+
+    Think of it like splitting a big project into small useful files.
+
+Example:
+    cleaning.py → functions for cleaning data
+    kpi.py → sales KPI functions
+    reports.py → analytics classes
+
+code:  import cleaning
+
+______________________________________________________________________
+
+🔹 2️⃣ Why Do We Use Modules?
+    ✔ Keeps code clean and organized
+    ✔ Reusability (write once, use anywhere)
+    ✔ Helps in large DA projects
+    ✔ Separate logic for cleaning, KPIs, reporting
+
+______________________________________________________________________
+
+🔹 3️⃣ Types of Imports
+----------------------------------------------------------------------
+A) Import whole module
+
+code:   import sales  
+        sales.total()
+----------------------------------------------------------------------
+B) Import with alias
+
+code:   import sales as s
+        s.total()
+---------------------------------------------------------------------
+C) Import specific functions
+
+code:   from sales import total
+        total()
+---------------------------------------------------------------------
+D) Import multiple
+
+code:   from sales import total, average
+_____________________________________________________________________
+
+🔹 4️⃣ Creating Your Own Module (Very Important)
+---------------------------------------------------------------------
+File structure:
+                file 1 -> cleaning.py
+                file 2 -> main.py
+---------------------------------------------------------------------
+Inside cleaning.py (file 1):
+
+        code:   def clean_name(name):
+                    return name.strip().lower()
+---------------------------------------------------------------------
+Inside main.py (file 2):
+
+        code:   import cleaning
+                print(cleaning.clean_name("  YOGITH "))
+______________________________________________________________________
+
+🔹 5️⃣ What Happens When You Import?
+
+    ✔ Python searches for the file in this order:
+    ✔ Current folder
+    ✔ Installed libraries
+    ✔ System paths
+    ✔ If module not found → ModuleNotFoundError
+______________________________________________________________________   
+🔹 6️⃣ Using Modules in Data Analytics
+    
+    You keep pipeline separated:
+
+📁 cleaning.py → remove spaces, lowercase, fill missing
+📁 eda.py → total, average, min/max
+📁 kpi.py → revenue, profit, margins
+📁 report.py → classes for analysis
+
+    This is how real DA projects are structured.
+______________________________________________________________________
+
+🔹 7️⃣ Built-in Python Modules
+----------------------------------------------------------------------
+    ✔ math module:
+
+    code:   import math
+            math.sqrt(25)
+----------------------------------------------------------------------
+    ✔ statistics module:
+
+    code:   import statistics
+            statistics.mean([10,20,30])
+----------------------------------------------------------------------
+    ✔ random module:
+
+    code:   import random
+            random.choice([1,2,3])
+______________________________________________________________________
+
+🔹 8️⃣ Memory Trick
+
+    📌 Module = Python file you can reuse
+    📌 import = bring code into your file
+    📌 from module import function = use only what you need
+    📌 alias = shortcut name
+______________________________________________________________________

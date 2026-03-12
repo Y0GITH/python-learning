@@ -1,0 +1,26 @@
+📘 in Operator — STRING NOTES
+
+🔹 What is in?
+in is a membership operator used to check whether a substring exists inside a string.
+
+🔹 Output Type
+ It always returns a Boolean:
+  + True → substring is found
+  + False → substring is not found
+
+🔹 Syntax
+substring in string
+
+🔹 Uses in Data Analytics
+Searching keywords
+Cleaning text
+Filtering data
+Validating inputs
+Checking patterns (emails, categories, names)
+
+🔹 Examples
+"Python" in "Python for Beginners"      # True
+"java" in "Python for Beginners"       # False
+
+🔹 Case-sensitive
+"world" in "World"   # False

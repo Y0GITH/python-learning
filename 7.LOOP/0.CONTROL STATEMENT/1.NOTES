@@ -1,0 +1,96 @@
+✅ 1. break
+   Stops the loop completely — the loop ends immediately.
+
+Example:
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+
+Output: 0
+        1
+        2
+
+Stops when i == 3.
+__________________________________________________________________
+
+✅ 2. continue
+    Skips the current iteration and moves to the next one.
+
+Example:
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+
+Output: 0
+        1
+        3
+        4
+
+2 is skipped.
+__________________________________________________________________
+
+✅ pass in Python
+    pass is called a null statement.
+    It does nothing — it is used when Python expects a statement, but you don’t want to write any code yet.
+
+🔹 Why do we need pass?
+   Python does not allow empty blocks.
+imp:So pass acts as a placeholder to avoid errors.
+
+------------------------------------------------------------------
+
+🔹 Example 1: In a loop
+code:   for i in range(5):
+            pass
+
+✔️ Loop runs, but nothing happens.
+
+------------------------------------------------------------------
+
+🔹 Example 2: Inside if
+
+code:  x = 10
+       if x > 5:
+           pass
+       else:
+           print("x is small")
+
+✔️ No error, but nothing happens when condition is true.
+
+------------------------------------------------------------------
+
+🔹 Example 3: Function (very common)
+code:   def analyze_data():
+            pass
+
+
+✔️ Function is defined, logic can be added later.
+
+------------------------------------------------------------------
+
+🔹 Example 4: Class
+code:   class DataAnalyzer:
+            pass
+
+✔️ Empty class, no error.
+
+------------------------------------------------------------------
+
+🔹 Difference between break, continue, and pass
+
+      Keyword                   What it does
+      + break	 ------>  Stops the loop completely
+      + continue ------>  Skips current iteration
+      + pass	 ------>  Does nothing (placeholder)
+
+------------------------------------------------------------------
+
+🧠 Easy way to remember
+
+    + break → ❌ STOP loop
+    + continue → ⏭️ SKIP once
+    + pass → 😐 DO NOTHING    
+    
+------------------------------------------------------------------

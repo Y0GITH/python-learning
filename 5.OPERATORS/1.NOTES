@@ -1,0 +1,81 @@
+📘 PYTHON — ARITHMETIC OPERATIONS, OPERATOR PRECEDENCE & MATH FUNCTIONS
+
+🔹 1️⃣ Arithmetic Operations in Python
+    Arithmetic operators are used to perform mathematical calculations on numbers.
+
+They are core to data analytics (KPIs, averages, growth, ratios).
+
+🔸 Common Arithmetic Operators
+Operator	Meaning	                    Example
++	        Addition	                 a + b
+-	        Subtraction	                 a - b
+*	        Multiplication	             a * b
+/	        Division (float result)	     a / b
+//	        Floor Division	             a // b
+%	        Modulus (remainder)	         a % b
+**	        Power	                     a ** b
+
+🔹 Analytics Examples
+    ' +  '  →   total sales
+    ' -  '  →   profit / loss
+    ' /  '  →   average, ratio
+    ' %  '  →   percentage
+    ' ** '  →   growth calculations
+    
+🔹 2️⃣ Operator Precedence (Order of Execution)
+    Operator precedence decides which operation runs first in an expression.
+
+🔸 Precedence Order (High → Low)
+
+1️⃣ () → Parentheses
+2️⃣ ** → Power
+3️⃣ *, /, //, %
+4️⃣ +, -
+
+🔹 Example
+result = 10 + 2 * 3
+
+Calculation: 2 * 3 = 6
+             10 + 6 = 16
+
+🔹 Using Parentheses
+result = (10 + 2) * 3
+
+Result: 36
+
+
+📌 Rule:
+Use parentheses to avoid confusion and logical errors.
+
+🔹 3️⃣ Math Functions in Python
+    Python provides built-in math functions to perform advanced calculations.
+
+🔸 Common Built-in Math Functions
+Function	Use
+abs()	Absolute value
+round()	Rounds number
+pow()	Power
+max()	Maximum value
+min()	Minimum value
+sum()	Sum of values
+🔹 Examples
+abs(-25)        # 25
+round(7.456,2)  # 7.46
+pow(2,3)        # 8
+max(10, 50, 20) # 50
+
+🔹 math Module Functions (Advanced)
+
+💻 To use them "CODE" :   
+
+import math
+
+Function	Meaning
+math.sqrt()	Square root
+math.ceil()	Round up
+math.floor()	Round down
+
+🧠 Memory Tip
+
+BODMAS rule applies in Python
+Brackets → Orders → Division → Multiplication → Addition → Subtraction

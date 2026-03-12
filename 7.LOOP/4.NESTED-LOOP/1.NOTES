@@ -1,0 +1,79 @@
+__________________________________________________________________
+📘 NESTED LOOPS 
+__________________________________________________________________
+
+🔹 1️⃣ What is a Nested Loop?
+    A nested loop is a loop inside another loop.
+------------------------------------------------------------------
+Syntax: for i in outer_loop:
+            for j in inner_loop:
+                # runs multiple times
+or ---------------------------------------------------------------
+Syntax: while condition1:
+            while condition2:
+                # inner loop logic
+__________________________________________________________________
+
+🔹 2️⃣ How Nested Loops Work
+   For each iteration of the outer loop,
+   the entire inner loop runs.
+
+Code:   for i in range(2):
+            for j in range(3):
+                print(i, j)
+
+output: 0 0
+        0 1
+        0 2
+        1 0
+        1 1
+        1 2
+
+Outer loop: runs 2 times
+Inner loop: runs 3 times
+Total: 2 × 3 = 6 iterations
+__________________________________________________________________
+
+🔹 3️⃣ Why Nested Loops Are Used
+
+    + Processing rows and columns
+    + Working with 2D lists (matrices)
+    + Pair combinations
+    + Data cleaning on nested structures
+    + Pattern printing
+    + Checking each element against every other element
+    + Comparing lists
+_________________________________________________________________    
+🔹 4️⃣ Common Uses in Data Analytics
+-----------------------------------------------------------------
+    ✔ Processing tables
+
+Code:   for row in dataset:
+            for cell in row:
+                clean(cell)
+-----------------------------------------------------------------
+    ✔ Checking for duplicates
+    
+code:   for i in range(len(data)):
+            for j in range(i+1, len(data)):
+                compare(data[i], data[j])
+-----------------------------------------------------------------
+    ✔ Creating cross combinations
+
+Regions × Products
+Customers × Months
+_________________________________________________________________
+
+🔹 5️⃣ Efficiency Note
+    Nested loops grow fast:
+
+10 × 10 = 100
+100 × 100 = 10,000
+So use them carefully for large data.
+_________________________________________________________________
+
+🧠 MEMORY TRICK
+    + Outer loop sets context
+    + Inner loop does detail work
+_________________________________________________________________
+    

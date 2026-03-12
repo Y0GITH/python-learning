@@ -1,0 +1,146 @@
+📘 CLASSES & OBJECTS 
+______________________________________________________________________
+
+🔹 1️⃣ What is a Class?
+    A class is a blueprint (template) to create objects.
+
+   🔹 Think like:
+    Class = Design of a car
+    Object = Actual car made from that design
+______________________________________________________________________
+
+🔹 2️⃣ What is an Object?
+    An object is an instance of a class.
+
+Example:
+        Class → Student
+        Object → Yogith (a student)
+______________________________________________________________________
+
+🔹 3️⃣ Basic Syntax
+
+class Student:
+    pass
+Create object:
+s1 = Student()
+
+code:   class Student:
+            name = 'Yogith'
+            age = 21
+            def info(self):
+                print(f'{self.name} is {self.age} year old.')
+        a = Student()
+        a.info()    #  Yogith is 21 year old.
+        # storing values
+        a.name = 'Anu'
+        a.age = 20
+        a.info()    # Anu is 20 year old.
+
+______________________________________________________________________
+
+🔹 4️⃣ Constructor (__init__)
+    This runs automatically when object is created.
+
+code:   class Student:
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+
+        # Create object:
+
+        s1 = Student("Yogith", 21)
+        print(s1.name)
+        print(s1.age)
+
+code:   class student:
+            def __init__(self , n , a):
+                self.name = n
+                self.age = a
+                print(f'{self.name} is {self.age} year old.')
+
+        a = student('Yogith',23)
+        try:
+            a = student()        
+        except:
+            print(f'there is error')  
+
+output: Yogith is 23 year old.
+        there is error 
+
+❌ You cannot use return inside __init__()
+
+    __init__() must not return anything.
+    If you write return self.name, Python will give an error:
+
+    Because __init__() is only for initializing the object, not returning values.
+______________________________________________________________________        
+🔹 Types of Constructor
+    1.Default Constructor
+    2.Parametric Constructor
+-----------------------------------------------------------------------
+1.Default Constructor:
+    When a constructor doesn't stores a value or an argument 
+
+code:   class Apple:
+            def __init__(self):
+                print(f'Hello world')
+        a = Apple()
+
+output: Hello world
+-----------------------------------------------------------------------
+2.Parametric Constructor:
+    when a constructor store and deals with an argument
+
+code:   class Student:
+            def __init__(self,name,age):
+                self.name  = name
+                self.age = age
+                print(f'{name} is {age} year old.')
+        a = Student('Yogith',21)
+
+output: Yogith is 21 year old.
+______________________________________________________________________
+
+🔹 5️⃣ What is self?
+    self refers to the current object.
+    Without self, object cannot store values.
+______________________________________________________________________
+
+🔹 6️⃣ Methods (Functions inside class)
+code:   class Student:
+            def __init__(self, name):
+                self.name = name
+            def greet(self):
+                print(f'Hello {self.name}')
+
+        # Call method:
+
+        s1 = Student("Yogith")
+        s1.greet()
+______________________________________________________________________
+
+🔹 7️⃣ Attributes vs Methods
+     --------------- -------------------------
+    |   Type	    |         Meaning         |
+    |---------------|-------------------------|
+    | Attribute	    | Variable inside class   |
+    | Method	    | Function inside class   |
+     -----------------------------------------
+______________________________________________________________________
+
+🔹 8️⃣ Real Example (Data Analytics Style)
+
+code:   class Product:
+            def __init__(self, name, price):
+                self.name = name
+                self.price = price
+
+            def discount(self, percent):
+                return self.price - (self.price * percent / 100)
+______________________________________________________________________                
+🧠 MEMORY TRICK
+class → blueprint
+object → real thing
+self → current object
+__init__ → constructor
+______________________________________________________________________

@@ -1,0 +1,114 @@
+📘 NOTES: else in Loops (Python)
+
+------------------------------------------------------------------
+
+🔹 1️⃣ What is else in loops?
+   In Python, a for or while loop can have an else block.
+
+   The else block runs only if the loop finishes normally
+   (i.e., without a break).
+
+Syntax: for item in sequence:
+            # loop body
+        else:
+            # runs only if loop didn’t break
+
+------------------------------------------------------------------
+
+🔹 2️⃣ else after for loop
+
+code:   for i in range(5):
+            print(i)
+        else:
+            print("Loop completed")
+
+Output: 0 
+        1 
+        2 
+        3 
+        4
+        Loop completed
+
+✔ Because the loop didn’t break.
+
+------------------------------------------------------------------
+
+🔹 3️⃣ else after while loop
+
+code:   i = 1
+        while i < 5:
+            print(i)
+            i += 1
+        else:
+            print("While loop finished")
+
+✔ Runs after loop ends naturally.
+
+------------------------------------------------------------------
+
+🔹 4️⃣ else + break (Important)
+   If a loop hits break, the else block does NOT run.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
+
+IN FOR LOOP
+
+code:   for i in range(5):
+            if i == 3:
+                print("bad")
+                break
+        else:
+            print("Completed")   # This will NOT run
+ 
+Output: 1
+        2
+        bad
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
+
+IN WHILE LOOP
+
+code:   i=1
+        while i in range(10):
+            print(i)
+            if i ==4:
+                print("bad")
+                break
+        else:print("good")
+ 
+Output: 1
+        2
+        3
+        bad
+
+------------------------------------------------------------------
+
+🔹 5️⃣ Real Use Case — Searching in a List
+   This is the MOST important and real use of loop–else.
+   You use else to check whether an item was found.
+
+Example:
+
+code:   nums = [3, 6, 9, 12]
+
+        for n in nums:
+            if n == 10:
+                print("Found")
+                break
+        else:
+            print("Not Found")
+
+Output: Not Found
+
+✔ Loop ended without break → else runs
+✔ Used in data validation, search, checking missing values
+
+------------------------------------------------------------------
+
+🧠 MEMORY TRICK
+
+break → stops loop → else will NOT run
+
+no break → else WILL run
+
+------------------------------------------------------------------

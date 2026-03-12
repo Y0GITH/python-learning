@@ -1,0 +1,116 @@
+Data Type
+    A data type defines:
+     +.What kind of value a variable stores
+     +.What operations can be performed on it
+Python automatically assigns a data type when a value is stored in a variable.
+
+Why Data Types Matter in Data Analytics
+  In data analytics, data types help to:
+    +.Perform correct calculations
+    +.Store structured data (tables, records)
+    +.Clean and transform datasets
+    +.Avoid errors in analysis
+
+Main Data Types in Python
+
+1️⃣ Numeric Data Types
+
+🔸 int (Integer) - 
+       Used for numbers and calculations.
+       Whole numbers (no decimal)
+Example uses: count, quantity, age, visits
+code: visits = 18000
+      employees = 25
+
+🔸 float
+      Decimal numbers
+      Used in averages, percentages, ratios
+code: conversion_rate = 7.25
+      average_score = 83.6
+
+🔸 complex
+      Used in scientific calculations (rare in analytics)
+code: x = 2 + 3j      
+
+2️⃣ Text Data Type
+📌 Strings are written inside quotes (" " or ' ').
+
+🔸 str (String)
+      Stores text or characters
+      Used for names, categories, labels
+code: product_name = "Laptop"
+      city = "Bengaluru"
+
+3️⃣ Boolean Data Type
+
+🔸 bool
+      Stores True or False
+      Used in conditions, filters, validation
+code: is_active = True
+      is_paid = False
+
+4️⃣ Sequence Data Types
+📌Used to store multiple values.
+
+🔸 list
+📌 📊 Very common in analytics
+      Ordered
+      Mutable (can change values)
+      Allows duplicates
+code: sales = [1200, 1500, 1700, 1600]
+
+🔸 tuple
+      Ordered
+      Immutable (cannot change values)
+      Faster than list
+code: months = ("Jan", "Feb", "Mar")
+
+🔸 range
+📌 Used in loops
+      Generates a sequence of numbers
+code: days = range(1, 31)
+
+5️⃣ Set Data Type
+
+🔸 set
+      Unordered
+      No duplicate values
+      Used to find unique items
+code:   countries = {"India", "USA", "India"}
+Output: {"India", "USA"}
+
+6️⃣ Mapping Data Type
+
+🔸 dict (Dictionary)
+📌 Stores data in key : value pairs
+       Used for structured data 
+
+code: student = {
+              "name": "Rahul",
+              "marks": 85,
+              "passed": True
+                }
+📊 Very important in real datasets (JSON, APIs).
+
+7️⃣ Special Data Type
+
+🔸 NoneType
+       Represents no value / missing value
+       Common in data cleaning
+code:  salary = None
+
+
+🔹 Checking Data Type
+syntax: type(variable_name)
+
+Example: type(10)      # int
+         type(10.5)    # float
+         type("Hi")    # str
+
+🔹 Type Conversion (Type Casting)
+Used to change one data type to another.
+code:    int("10")
+         float(5)
+         str(100)
+
+📌 Very common when reading data from files or user input.

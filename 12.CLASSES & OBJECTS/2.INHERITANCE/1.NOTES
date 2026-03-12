@@ -1,0 +1,124 @@
+📘 INHERITANCE 
+______________________________________________________________________
+
+🔹 1️⃣ What is Inheritance?
+    Inheritance allows one class to use the properties and methods of  another class.
+
+    i:e
+    The parent class = Base class / Superclass
+    The child class = Derived class / Subclass
+
+Child class can:
+    ✔ use parent methods
+    ✔ use parent attributes
+    ✔ add new methods
+    ✔ override parent methods
+______________________________________________________________________
+
+🔹 2️⃣ Basic Syntax
+
+Syntax: class Parent:
+            pass
+
+        class Child(Parent):
+            pass
+______________________________________________________________________            
+🔹 3️⃣ Example (Very Simple)
+
+code:   class Animal:
+            def sound(self):
+                print("Animal makes sound")
+
+        class Dog(Animal):
+            pass
+
+        d = Dog()
+        d.sound()
+
+Output: Animal makes sound
+
+cauz;
+Dog inherited the sound() method.
+______________________________________________________________________
+
+🔹 4️⃣ Using __init__ with Inheritance (Important)
+    Use super() to call parent constructor:
+
+code:   class Parent:
+            def __init__(self, name):
+                self.name = name
+
+        class Child(Parent):
+            def __init__(self, name, age):
+                super().__init__(name)
+                self.age = age
+
+MAIN THING IS " super(). " this the key to do                
+______________________________________________________________________                
+🔹 5️⃣ Method Overriding
+    Child can replace parent method.
+
+Example Syntax
+Syntax: class A:
+            def show(self):
+                print("From A")
+
+        class B(A):
+            def show(self):
+                print("From B")
+______________________________________________________________________
+
+🔹 6️⃣ Why Inheritance is important in Data Analytics?
+
+Used in:
+    + Extending analysis classes
+    + Reusing logic for different datasets
+    + Improving modularity
+    + Creating multiple analyzers that share base functions
+______________________________________________________________________
+
+🔵 DATA ANALYTICS EXAMPLE (Very Important)
+
+    ""  Parent Class: BasicSales                                     ""
+    ""  Child Class: AdvancedSales (inherits and adds more methods)  ""
+
+code:   # Parent class:
+        class BasicSales:
+        def __init__(self, sales):
+            self.sales = sales
+        def total(self):
+            total = 0
+            for s in self.sales:
+                total += s
+            return total
+            
+        # Child class:
+        class AdvancedSales(BasicSales):
+            def average(self):
+                return self.total() / len(self.sales)
+
+            def highest(self):
+                high = self.sales[0]
+                for s in self.sales:
+                    if s > high:
+                        high = s
+                return high
+        Usage:
+        data = AdvancedSales([100, 200, 150])
+        print(data.total())
+        print(data.average())
+        print(data.highest())
+
+🎯 Output
+        450
+        150.0
+        200
+
+Child class inherited total() and added new analytics.
+______________________________________________________________________
+
+🧠 MEMORY TRICK
+Parent → Base class  
+Child → Inherits (gets everything)  
+super() → Helps child use parent's __init__
+______________________________________________________________________

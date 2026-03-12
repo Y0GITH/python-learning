@@ -1,0 +1,113 @@
+___________________________________________________________________
+📘 FUNCTIONS — SHORT NOTES
+___________________________________________________________________
+
+🔹 1️⃣ What is a Function?
+   A function is a block of code that runs only when you call it.
+
+Syntax: def function_name():
+            # code
+Call it:
+        function_name()
+___________________________________________________________________
+
+🔹 2️⃣ Why use Functions?
+
+    ✔ Avoid repeating code
+    ✔ Better organization
+    ✔ Reusable
+    ✔ Cleaner code
+    ✔ Easier debugging
+___________________________________________________________________
+
+🔹 3️⃣ Function With Parameters
+   Parameters → data you send into the function.
+
+code:   def greet(name):         # name hear is parameters
+            print("Hello", name)
+
+        greet("Yogith")          # name hear is argument
+___________________________________________________________________
+
+🔹 4️⃣ Function With Multiple Parameters
+
+code:   def add(a, b):
+            print(a + b)
+
+        add(10, 20)
+___________________________________________________________________
+
+🔹 5️⃣ Default Parameters
+   Value used when no argument is given.
+
+code:   def greet(name="Guest"):
+            print(f'Hello {name}')
+
+        greet()          # Hello Guest
+        greet("Akul")    # Hello Akul
+
+output: Hello Guest
+        Hello Akul
+___________________________________________________________________
+
+🔹 6️⃣ Return Statement
+    Sends a value back to the caller.
+
+code:   def add(a, b):
+            return a + b
+
+        total = add(5, 10)
+        print(total)
+___________________________________________________________________
+
+🔹 7️⃣ Function With *args (Multiple Values)
+    this process is called Argument packing 
+    What is *args?
+    *args means:
+        A function can receive any number of arguments
+        (0, 1, 2, or many)
+    The arguments are collected into a tuple.
+
+code:   def total(*nums):
+            print(sum(nums))
+
+        total(1,2,3,4)
+
+output: 10
+___________________________________________________________________
+
+🔹 8️⃣ Function With **kwargs (Dictionary Arguments)
+    
+code:   def display(**info):
+            print(info)
+
+        display(name="Yogith", age=21)
+output: {name="Yogith", age=21}
+___________________________________________________________________
+
+🔹 9️⃣ Local vs Global Variables
+
+    Local → inside function
+    Global → outside function
+
+code:   x = 10      # global
+
+        def test():
+            x = 5   # local
+___________________________________________________________________
+
+🔹 🔟 Why parameters are better than global variables?
+
+    ✔ safer
+    ✔ cleaner
+    ✔ avoid errors
+    ✔ reusable
+    ✔ professional
+___________________________________________________________________
+
+🧠 MEMORY TRICK
+
+    ✔ Function = machine
+    ✔ Parameters = input to machine
+    ✔ Return = output from machine
+___________________________________________________________________    

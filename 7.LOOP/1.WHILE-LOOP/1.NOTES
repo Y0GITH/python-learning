@@ -1,0 +1,47 @@
+🔹 What is a while loop?
+   A while loop repeats a block of code as long as the condition is TRUE.
+
+🔸 Syntax:  while condition:
+               # repeat this code
+
+🔸 Example meaning:
+“Keep doing this until the condition becomes false.”
+
+🔹 Why is it used?
+    + Repeating tasks
+    + Input validation
+    + Counting
+    + Data cleaning
+    + Processing until a goal is reached
+
+🔹 Important: Avoid Infinite Loops
+   A while loop MUST change something inside the loop, otherwise it will run forever.
+
+Example of an infinite loop ❌: while True:
+                                    print("hi")
+
+🔹 Typical Structure
+code:   i = 1
+        while i <= 5:
+            print(i)
+            i += 1   # very important
+
+🔹 Common Uses in Data Analytics
+   + Taking input until it is valid
+   + Processing data until a condition is met
+   + Generating reports until a limit
+   + Running simulations
+
+🔹 Break & Continue
+   + break → stop the loop immediately
+   + continue → skip the current iteration and go to next
+
+Example:
+while True:
+    x = input("Enter value: ")
+    if x == "stop":
+        break
+
+🧠 MEMORY TRICK
+    While = repeat UNTIL condition becomes False
+   

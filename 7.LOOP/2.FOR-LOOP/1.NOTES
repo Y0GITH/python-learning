@@ -1,0 +1,89 @@
+🔹 What is a for loop?
+   A for loop is used to iterate (repeat) over a sequence:
+        + list
+        + string
+        + range
+        + tuple
+        + dictionary
+        + dataset
+It executes the code once for each item in the sequence.
+
+------------------------------------------------------------------
+
+🔹 Basic Syntax:|| for variable in sequence:
+                ||      # repeat this block
+
+------------------------------------------------------------------
+
+code:   for i in range(5):
+            print(i)
+
+Output: 0 1 2 3 4
+
+------------------------------------------------------------------
+
+🔹 Why is it important for Data Analytics?
+    + Process multiple rows
+    + Clean data in lists
+    + Calculate totals or averages
+    + Iterate through columns
+    + Filter values
+    + Build new lists
+
+------------------------------------------------------------------
+
+🔹 Common Iterations
+
+1️⃣ Iterating through a list
+code:   sales = [1200, 1500, 1800]
+        for amount in sales:
+            print(amount)
+
+------------------------------------------------------------------
+
+2️⃣ Iterating through a range
+code:   for i in range(1, 6):
+            print(i)
+
+------------------------------------------------------------------
+
+3️⃣ Iterating through a string
+code:   for ch in "Data":
+        print(ch)
+
+------------------------------------------------------------------
+
+4️⃣ Using break inside loop
+code:   for i in range(10):
+            if i == 5:
+                break
+
+------------------------------------------------------------------
+
+5️⃣ Using continue
+code:   for i in range(5):
+            if i == 2:
+                continue
+            print(i)
+
+------------------------------------------------------------------
+
+🔹 range() Explained
+    Code	          Meaning
+ range(5)	          0 to 4
+ range(1,5)           1 to 4
+ range(1,10,2)	      1, 3, 5, 7, 9
+ 
+------------------------------------------------------------------
+
+🔹 For loop + Sum (Very important)
+code:   total = 0
+        for i in range(1, 6):
+            total += i
+
+------------------------------------------------------------------
+
+🧠 MEMORY TRICK
+    For each item → do something → repeat automatically
+
+------------------------------------------------------------------

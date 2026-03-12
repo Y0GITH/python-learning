@@ -1,0 +1,125 @@
+🚀 MINI PROJECT — SALES ANALYTICS ENGINE
+    You are building a sales analytics tool for a store.
+    We will structure it like a real project using modules + classes.
+
+📁 Project Structure
+    sales_engine.py     → module with class
+    main.py             → run analysis
+
+📘 DATASET
+    products  = ["Laptop","Phone","Tablet","Monitor","Keyboard","Mouse"]
+    prices    = [60000,25000,15000,12000,2000,800]
+    quantity  = [5,10,7,4,20,25]
+    discount  = [10,5,15,8,0,0]
+
+Meaning:
+    Laptop  → price 60000 → sold 5 → discount 10%
+    Phone   → price 25000 → sold 10 → discount 5%
+    ...
+
+🎯 TASKS YOUR ENGINE MUST DO
+    Your class must compute:
+
+1️⃣ Total Revenue Per Product
+
+Formula
+    revenue = price * quantity
+
+2️⃣ Final Price After Discount
+
+    price - (price * discount / 100)
+
+    Use map + lambda.
+
+3️⃣ Products With Revenue > 100000
+
+    Use filter().
+
+4️⃣ Combine Product Report
+
+    Use zip() to create dataset like:
+
+    Laptop → price → quantity → final_price → revenue
+
+5️⃣ Rank Products
+
+    Use enumerate() to print ranking.
+
+Example output:
+
+    1 → Laptop → Revenue 300000
+    2 → Phone → Revenue 250000
+
+📁 MODULE FILE
+
+    sales_engine.py
+    You must create class:
+    SalesAnalytics
+
+Attributes:
+    products
+    prices
+    quantity
+    discount
+
+Methods to create:
+    calculate_final_prices()
+    calculate_revenue()
+    high_revenue_products()
+    generate_report()
+
+📁 MAIN FILE
+
+    main.py
+
+    You must:
+        import module
+        create object
+        call report method
+
+🎯 EXPECTED OUTPUT STYLE
+
+    PRODUCT SALES REPORT
+    ---------------------
+
+    Laptop → Price:60000 → Qty:5 → Final:54000 → Revenue:300000
+    Phone → Price:25000 → Qty:10 → Final:23750 → Revenue:250000
+    Tablet → Price:15000 → Qty:7 → Final:12750 → Revenue:105000
+    Monitor → Price:12000 → Qty:4 → Final:11040 → Revenue:48000
+    Keyboard → Price:2000 → Qty:20 → Final:2000 → Revenue:40000
+    Mouse → Price:800 → Qty:25 → Final:800 → Revenue:20000
+
+Then:
+    HIGH REVENUE PRODUCTS (>100000)
+    Laptop
+    Phone
+    Tablet
+
+🧠 Skills This Tests
+You will use:
+    map()
+    filter()
+    zip()
+    enumerate()
+    lambda
+    classes
+    modules
+    logic building
+This is exactly how a small analytics script works in real projects.
+
+⚠️ IMPORTANT RULE
+
+Do NOT use:
+    sum()
+    max()
+    min()
+    pandas
+Write logic yourself.
+
+👉 Your First Step
+
+Start by writing the class skeleton in sales_engine.py:
+
+class SalesAnalytics:
+    def __init__(self, products, prices, quantity, discount):
+        ...

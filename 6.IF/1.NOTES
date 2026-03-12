@@ -1,0 +1,61 @@
+1️⃣ If Statements
+
+🔹 Purpose
+   Used to run code only when a condition is true.
+
+🔹 Syntax:  if condition:
+                # code
+            elif condition:
+                # code
+            else:
+                # code
+
+🔹 Why important?
+
+Used for:   + checking input
+            + filtering data
+            + decision making
+            + KPI evaluation
+            + eligibility checks
+
+🔹 Example
+if sales > 50000:
+    print("Good performance")
+
+------------------------------------------------------------------
+
+2️⃣ Comparison Operators
+    Used to compare two values.
+    They always return True / False.
+
+Operator	    Meaning	                 Example
+   ==	     Equal to	                 a == b
+   !=	     Not equal	                 a != b
+   >	     Greater than	             sales > target
+   <	     Less than	                 score < 50
+   >=	     Greater or equal	         marks >= 35
+   <=	     Less or equal	             age <= 18
+
+🔹 Analytics Uses
+   + Checking KPIs
+   + Filtering rows
+   + Categorizing data
+   + Eligibility conditions
+
+3️⃣ Logical Operators
+    Used to combine multiple conditions.
+
+Operator	        Meaning	                    Example
+  and	    BOTH conditions must be true	a > 10 and a < 20
+  or	    ANY one condition is true	    age < 18 or age > 60
+  not	    Reverses true/false	            not True → False
+
+🔹 Analytics Uses
+   Filter multiple conditions
+   Multi-condition eligibility
+   Cleaning data with rules
+
+🧠 MEMORY TRICK
+   Comparison creates True/False
+   Logical connects True/False
+   If uses True/False to decide

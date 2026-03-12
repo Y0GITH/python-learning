@@ -1,0 +1,103 @@
+___________________________________________________________________
+
+📘 LIST COMPREHENSION
+___________________________________________________________________
+
+🔹 1️⃣ What is List Comprehension?
+    List comprehension is a short way to create lists using a loop in one line.
+    Instead of writing multiple lines with a for loop, we write it in a single expression.
+---------------------------------------------------------------------
+syntax:
+        [expression for item in iterable]
+---------------------------------------------------------------------
+Example:
+        numbers = [1,2,3,4]
+        squares = [n*n for n in numbers]
+        print(squares)
+Output:
+        [1, 4, 9, 16]
+___________________________________________________________________
+
+🔹 2️⃣ Loop Version vs List Comprehension
+---------------------------------------------------------------------
+Normal loop:
+        numbers = [1,2,3,4]
+        squares = []
+        for n in numbers:
+            squares.append(n*n)
+---------------------------------------------------------------------
+List comprehension:
+        squares = [n*n for n in numbers]
+---------------------------------------------------------------------
+Both produce the same result.
+List comprehension is just shorter and cleaner.
+___________________________________________________________________
+
+🔹 3️⃣ List Comprehension With Condition
+-------------------------------------------------------------------  
+    You can also filter values.
+-------------------------------------------------------------------
+syntax:
+        [expression for item in iterable if condition]
+-------------------------------------------------------------------
+Example:
+        numbers = [1,2,3,4,5,6]
+        even_numbers = [n for n in numbers if n%2 == 0]
+        print(even_numbers)
+Output:
+        [2,4,6]
+___________________________________________________________________
+
+🔹 4️⃣ Replace map() Using List Comprehension
+-------------------------------------------------------------------
+Example using map():
+        numbers = [1,2,3]
+        result = list(map(lambda x: x*2, numbers))
+-------------------------------------------------------------------
+List comprehension version:
+        result = [x*2 for x in numbers]
+-------------------------------------------------------------------
+Most Python developers prefer this.
+___________________________________________________________________
+
+🔹 5️⃣ Replace filter() Using List Comprehension
+
+Example using filter():
+        numbers = [1,2,3,4,5]
+        result = list(filter(lambda x: x>3, numbers))
+-------------------------------------------------------------------
+List comprehension:
+        result = [x for x in numbers if x>3]
+___________________________________________________________________
+
+🔹 6️⃣ Data Analytics Example
+
+Dataset:
+        sales = [500,1200,700,1800]
+        status = ["High" if s>1000 else "Low" for s in sales]
+        print(status)
+Output:
+        ['Low','High','Low','High']
+___________________________________________________________________
+
+🔹 7️⃣ Using Multiple Variables (with zip)
+
+Example:
+        prices = [100,200,300]
+        qty = [2,3,1]
+        revenue = [p*q for p,q in zip(prices,qty)]
+        print(revenue)
+Output:
+        [200,600,300]
+___________________________________________________________________
+
+🧠 MEMORY TRICK
+-------------------------------------------------------------------
+Think of list comprehension like:
+        new_list = [result for item in data if condition]
+-------------------------------------------------------------------
+Structure:
+        result → what you want to create
+        for → loop
+        if → optional filter
+__________________________________________________________________        

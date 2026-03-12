@@ -1,0 +1,147 @@
+__________________________________________________________________
+
+📘 TUPLES — SHORT NOTES
+__________________________________________________________________
+
+🔹 1️⃣ What is a Tuple?
+   A tuple is a collection of items similar to a list, BUT:
+
+    ✔ Immutable (cannot change)
+    ✔ Ordered
+    ✔ Allows duplicates
+    ✔ Faster than lists
+    ✔ Uses parentheses ()
+
+code:   t = (10, 20, 30)
+        x = 12,23,34       # is also typle
+        z = 12             # is not a tuple
+        but 
+        ap = 12,           # is a tuple as we have added is cama. 
+                           so it consider as a tuple.   
+__________________________________________________________________
+
+🔹 2️⃣ Why use Tuples?
+
+    ✔ When data should not be changed
+    ✔ More memory-efficient
+    ✔ Used for fixed values
+    ✔ Function returns
+    ✔ Database row representation
+    ✔ Coordinates, dates, etc.
+------------------------------------------------------------------
+Example of immutable behavior:
+
+t = (1, 2, 3)
+t[0] = 10   # ❌ ERROR
+
+You cannot update, append, or remove items in tuples.
+__________________________________________________________________
+
+🔹 3️⃣ Tuple Indexing
+
+    t = (4, 5, 6)
+    t[0] → 4
+    t[-1] → 6
+__________________________________________________________________
+
+🔹 4️⃣ Tuple Slicing
+
+    t = (10, 20, 30, 40)
+    t[1:3] → (20, 30)
+__________________________________________________________________
+
+🔹 5️⃣ Tuple Methods (Only 2)
+
+    t.count(10)
+    t.index(20)
+__________________________________________________________________
+
+🔹 6️⃣ Tuples in Data Analytics
+
+Used when: ✔ Data shouldn't change
+           ✔ Keeping a record row
+           ✔ Returning multiple values from functions
+------------------------------------------------------------------
+Example:
+code:   transaction = ("2025-01-01", 1200, "SUCCESS")
+__________________________________________________________________
+
+📘 UNPACKING — SHORT NOTES
+__________________________________________________________________
+
+🔹 1️⃣ What is Unpacking?
+    ✔ Assigning tuple elements to variables in ONE line.
+------------------------------------------------------------------
+Example : t = (10, 20, 30)
+          a, b, c = t
+
+Now:      a = 10
+          b = 20
+          c = 30
+__________________________________________________________________
+
+🔹 2️⃣ Unpacking with *
+
+code:   a, *b = (1, 2, 3, 4)
+
+Now:    a = 1
+        b = [2, 3, 4]
+__________________________________________________________________
+
+🔹 3️⃣ Partial Unpacking
+
+code:   a, b, _, d = (10, 20, 30, 40)
+
+_ means “ignore this value”.
+"_" is also a variable
+__________________________________________________________________
+
+🔹 4️⃣ Swapping with unpacking
+
+code:   a, b = b, a
+__________________________________________________________________
+
+🔹 5️⃣ Unpacking inside loops
+
+code:   data = [(1,2), (3,4), (5,6)]
+        for x, y in data:
+            print(x, y)
+output: 1 2 
+        3 4     
+        5 6            
+------------------------------------------------------------------
+✔ But u can do it with a normal list 
+
+code:   sales = [100, 200, 300, 400]
+        for a,b in sales:
+            print(f'sales : {a} {b}')
+output: ERROR
+__________________________________________________________________
+
+🧠 MEMORY TRICK
+    ✔ Tuple = fixed list
+    ✔ Unpacking = break tuple into variables
+__________________________________________________________________
+
+concatation of tuples
+    we can concatinate a tuple with a tuple. but not a string. 
+    tuple ends with ' , ' at the end. 
+code :  a = ('apple','mango')
+        new = a[0] + ('hello',) + a[1]
+
+
+sortinng a tuple
+code :  a = (23,45,2,56)
+        sorted(a) 
+
+NESTED TUPLES
+        A = (1.5,'apple',('mango',200),2026)
+        # Unpacking        
+
+UNPACKING TUPLES
+apple = (1,2,3,4,5,6,7)
+a,b,c,*d = apple
+print(a)
+print(b)
+print(c)
+print(*d)        

@@ -1,0 +1,194 @@
+___________________________________________________________________
+
+📊 PROJECT: RETAIL SALES ANALYTICS SYSTEM
+    Think of it like you’re a Data Analyst for a retail store.
+    You receive raw transaction data and must analyze it.
+
+-------------------------------------------------------------------
+This project will use:
+
+    + lists
+    + dictionaries
+    + loops
+    + functions
+    + classes
+    + modules
+    + lambda
+    + map
+    + filter
+    + zip
+    + enumerate
+    + sorted
+    + list comprehension
+    + dictionary comprehension
+    + exception handling
+
+Basically everything you learned.
+___________________________________________________________________
+📁 Project Structure
+-------------------------------------------------------------------
+    retail_analytics/
+    │
+    ├── data.py
+    ├── analytics_engine.py
+    └── main.py
+___________________________________________________________________
+
+📘 Dataset (data.py)
+
+-------------------------------------------------------------------
+    transactions = [
+                    ("T101","Laptop","Electronics",60000,2),
+                    ("T102","Phone","Electronics",25000,3),
+                    ("T103","Tablet","Electronics",15000,4),
+                    ("T104","Chair","Furniture",5000,5),
+                    ("T105","Desk","Furniture",12000,2),
+                    ("T106","Mouse","Accessories",800,10),
+                    ("T107","Keyboard","Accessories",2000,6),
+                    ("T108","Monitor","Electronics",12000,3)
+                    ]
+-------------------------------------------------------------------
+Each transaction contains:
+        (transaction_id, product, category, price, quantity)
+-------------------------------------------------------------------
+🎯 Tasks Your System Must Perform
+    Your system should analyze this dataset.
+___________________________________________________________________
+
+1️⃣ Calculate Revenue Per Transaction
+
+-------------------------------------------------------------------
+Formula:
+    revenue = price × quantity
+-------------------------------------------------------------------
+Example output:
+    T101 → Laptop → Revenue:120000
+    T102 → Phone → Revenue:75000
+-------------------------------------------------------------------
+Concepts used:
+    zip
+    loops
+    classes
+    methods
+___________________________________________________________________
+
+2️⃣ Calculate Total Revenue of Store
+
+-------------------------------------------------------------------
+Output:
+    Total Revenue : XXXXX
+-------------------------------------------------------------------
+Concepts used:
+    loops
+    accumulator
+    functions
+___________________________________________________________________
+
+3️⃣ Find High Revenue Transactions
+
+-------------------------------------------------------------------
+Condition:
+    revenue > 50000
+-------------------------------------------------------------------
+Use:
+    filter()
+    lambda
+-------------------------------------------------------------------
+Output:
+    Laptop
+    Phone
+    Tablet
+___________________________________________________________________
+
+4️⃣ Category-wise Revenue
+
+-------------------------------------------------------------------
+Output:
+    Electronics → 231000
+    Furniture → 49000
+    Accessories → 28000
+-------------------------------------------------------------------
+Concepts used:
+    dictionary
+    dictionary comprehension
+    loops
+    aggregation
+___________________________________________________________________
+
+5️⃣ Rank Products by Revenue
+
+-------------------------------------------------------------------
+Output:
+    1 → Laptop → 120000
+    2 → Phone → 75000
+    3 → Tablet → 60000
+
+Concepts used:
+    sorted()
+    lambda
+    enumerate()
+___________________________________________________________________
+
+6️⃣ Create Clean Analytics Report
+
+-------------------------------------------------------------------
+Output example:
+
+        RETAIL SALES REPORT
+        -------------------
+
+        Laptop → Category:Electronics → Revenue:120000
+        Phone → Category:Electronics → Revenue:75000
+        Tablet → Category:Electronics → Revenue:60000
+        Chair → Category:Furniture → Revenue:25000
+
+-------------------------------------------------------------------
+
+Concepts used:
+    zip
+    f-strings
+    loops
+    classes
+___________________________________________________________________
+
+7️⃣ List Comprehension Task
+    Create a list of all products with revenue > 40000
+
+-------------------------------------------------------------------
+Example:
+    ["Laptop","Phone","Tablet"]
+-------------------------------------------------------------------
+Concepts:
+    list comprehension
+    conditions
+___________________________________________________________________
+
+8️⃣ Error Handling
+___________________________________________________________________
+
+If dataset has bad data like:
+    ("T109","Laptop","Electronics","INVALID",2)
+
+    Your system should catch the error.
+-------------------------------------------------------------------
+Use:
+    try
+    except
+___________________________________________________________________
+
+📦 Class You Must Build
+-------------------------------------------------------------------
+Inside analytics_engine.py
+
+Create:
+    class RetailAnalytics:
+
+
+Methods:
+    calculate_revenue()
+    total_revenue()
+    high_revenue_transactions()
+    category_revenue()
+    rank_products()
+    generate_report()
+___________________________________________________________________

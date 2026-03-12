@@ -1,0 +1,57 @@
+INPUT IN PYTHON
+
+🔹 What is input()?
+   input() is a built-in Python function used to take input from the user.
+
+⚠️ Important Rule
+👉 input() always returns data as a string (str), even if you type a number.
+
+🔹 Basic Syntax
+        variable = input("message")
+
+Example:
+        name = input("Enter your name: ")
+
+🔹 Why Type Conversion is Needed
+   Since input() gives string data, we must convert it for calculations.
+
+Example Problem
+code:   age = input("Enter age: ")
+
+⚠️ Here, age is a string, not a number.
+
+To calculate:
+code:   age = int(input("Enter age: "))
+
+🔹 Common Type Conversions with Input
+         ________________ _____________________
+        | Data Needed	 |     Syntax          |
+        |________________|_____________________|
+        |   Integer	     |   int(input())      |
+        |   Float	     |   float(input())    |
+        |   String	     |   input()           |
+        |________________|_____________________|
+
+🔹 Input in Data Analytics
+Used for:
+    Taking dataset size
+    User-defined thresholds
+    KPI values
+    Parameters for analysis
+code:  total_sales = float(input("Enter total sales: "))        
+
+
+🔹 Multiple Inputs
+
+👶NOOB WAY
+code: a = int(input("Enter first value: "))
+      b = int(input("Enter second value: "))
+
+🔰PRO WAY
+🔹 Input from Same Line (Advanced)
+code: a, b = map(int, input("Enter two values: ").split())
+
+🔹 Common Mistakes
+   ❌ Using commas in numbers
+   ❌ Forgetting type conversion
+   ❌ Mixing strings and numbers

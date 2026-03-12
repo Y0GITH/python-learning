@@ -1,0 +1,102 @@
+___________________________________________________________________
+
+📘 LAMBDA FUNCTIONS
+___________________________________________________________________
+
+🔹 1️⃣ What is a Lambda Function?
+    A lambda function is a small anonymous function written in one line.
+    It is used when we need a quick function without defining a full function using def.
+-------------------------------------------------------------------
+syntax:
+         lambda parameters : expression
+-------------------------------------------------------------------
+Example:
+        add = lambda a, b: a + b
+        print(add(5,3))
+Output:
+        8
+-------------------------------------------------------------------
+Here:
+        lambda → keyword
+        a, b → parameters
+        a + b → returned expression
+        No return keyword needed.
+___________________________________________________________________
+
+🔹 2️⃣ Lambda vs Normal Function
+-------------------------------------------------------------------
+Normal function:
+        def square(x):
+            return x * x
+-------------------------------------------------------------------
+Lambda version:
+        square = lambda x: x * x
+-------------------------------------------------------------------
+Both produce same result.
+___________________________________________________________________
+
+🔹 3️⃣ Lambda with Multiple Parameters
+    Lambda can take multiple inputs.
+-------------------------------------------------------------------
+Example:
+        multiply = lambda a, b: a * b
+        print(multiply(4,5))
+Output
+        20
+___________________________________________________________________
+
+🔹 4️⃣ Lambda Inside Another Function Call
+    Often used inside functions like map, filter, sorted.
+-------------------------------------------------------------------
+Example:
+        numbers = [1,2,3,4]
+        result = list(map(lambda x: x * 2, numbers))
+        print(result)
+Output:
+        [2,4,6,8]
+___________________________________________________________________
+
+🔹 5️⃣ Lambda with Conditional Logic
+    Lambda can also include if–else expressions.
+-------------------------------------------------------------------
+Example:
+        check = lambda x: "High Sale" if x > 1000 else "Low Sale"
+        print(check(1500))
+Output:
+        High Sale
+___________________________________________________________________
+
+🔹 6️⃣ Lambda in Data Analytics
+    
+    Very common for:
+        ✔ transforming data
+        ✔ creating quick calculations
+        ✔ sorting datasets
+        ✔ feature engineering
+-------------------------------------------------------------------
+Example:
+        sales = [1200, 800, 600, 400]
+        tax_added = list(map(lambda x: x * 1.18, sales))
+        print(tax_added)
+Output:
+        [1416.0, 944.0, 708.0, 472.0]
+___________________________________________________________________
+
+🔹 7️⃣ Limitations of Lambda
+
+    Lambda functions:
+        ✔ only one expression
+        ❌ cannot contain multiple statements
+        ❌ cannot contain loops or assignments
+
+For complex logic → use def.
+___________________________________________________________________
+
+🧠 MEMORY TRICK
+
+    Lambda = Quick one-line function
+    Think:
+        def → big function
+        lambda → quick calculation
+    Use lambda when function is small and temporary.
+___________________________________________________________________

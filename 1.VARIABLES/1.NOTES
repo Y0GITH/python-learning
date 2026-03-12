@@ -1,0 +1,16 @@
+Variables in Python
+    A variable in Python is used to store data values so they can be reused and manipulated.
+
+In data analytics, variables commonly store:
+    1.Numeric values (sales, profit, age, scores)
+    2.Text data (names, categories)
+    3.Calculated results (average, total, growth rate)
+
+Python is dynamically typed, meaning you don’t need to declare the type — Python understands it automatically.
+
+Example (concept only, not code):
+    Store total sales
+    Store number of customers
+    Store average revenue per customer
+
+Variables make data readable, reusable, and analysable.
